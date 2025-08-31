@@ -9,8 +9,6 @@ This project is based on the Astro Starter Kit and customized to showcase Vely i
 
 - [Astro](https://astro.build/) – Static Site Builder
 - [TypeScript](https://www.typescriptlang.org/) – Typed JavaScript
-- [Tailwind CSS](https://tailwindcss.com/) – Styling and responsive design
-- [Vercel](https://vercel.com/) / [Netlify](https://www.netlify.com/) – (optional) Deployment platforms
 
 ---
 
