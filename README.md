@@ -1,46 +1,72 @@
-# Astro Starter Kit: Basics
+# Vely – Landing Page
 
-```sh
-npm create astro@latest -- --template basics
+A modern and minimal landing page for **Vely**, built with [Astro](https://astro.build/).  
+This project is based on the Astro Starter Kit and customized to showcase Vely in a clean, fast and SEO-friendly way.
+
+---
+
+## 🚀 Tech Stack
+
+- [Astro](https://astro.build/) – Static Site Builder
+- [TypeScript](https://www.typescriptlang.org/) – Typed JavaScript
+- [Tailwind CSS](https://tailwindcss.com/) – Styling and responsive design
+- [Vercel](https://vercel.com/) / [Netlify](https://www.netlify.com/) – (optional) Deployment platforms
+
+---
+
+## 📸 Preview
+
+> *(Add a screenshot or demo link here once deployed, e.g. `https://vely.vercel.app`)*
+
+---
+
+## 📂 Project Structure
+
+Inside the project you’ll find the following folders and files:
+
+```bash
+├── public/ # Static assets (images, icons, etc.)
+├── src/
+│ ├── components/ # Reusable UI components
+│ ├── layouts/ # Page layouts
+│ └── pages/ # Application pages (routes)
+└── package.json # Project dependencies
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## ⚙️ Getting Started
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+1. **Clone the repository**
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+   ```bash
+   git clone https://github.com/mariamoraan/vely.git
+   cd vely
+   ```
+2. **Install dependencies**
+    ```bash
+    npm install
+    ```
+3. **Start the development server**
+    ```bash
+    npm run dev
+    ```
+    Open http://localhost:4321 in your browser.
+4. **Build for production**
+    ```bash
+    npm run build
+    ```
+5. **Preview the production build**
+    ```bash
+    npm run preview
+    ```
+## 🤝 Contributing
 
-## 🧞 Commands
+This project is currently personal, but suggestions and improvements are welcome.
+Feel free to fork, open issues, or submit pull requests.
 
-All commands are run from the root of the project, from a terminal:
+## 📬 Contact
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Created by @mariamoraan
+ – feel free to reach out!
