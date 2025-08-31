@@ -1,0 +1,92 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const features = [
+    { id: 1, title: "Gestión de actividades", description: "Organiza y planifica tus actividades de forma sencilla.", icon: "calendar" },
+    { id: 2, title: "Inscripciones online", description: "Permite a tus alumnos inscribirse fácilmente a tus actividades.", icon: "user" },
+    { id: 3, title: "Control de asistencia", description: "Lleva un registro de la asistencia de tus alumnos.", icon: "check" },
+    { id: 4, title: "Comunicación efectiva", description: "Mantén a tus alumnos informados sobre novedades y cambios.", icon: "megaphone" },
+    { id: 5, title: "Informes y estadísticas", description: "Obtén informes detallados sobre tus actividades y alumnos.", icon: "chart" },
+    { id: 6, title: "Gestión de grupos", description: "Crea grupos por nivel, horario o categoría y organiza mejor a tus alumnos.", icon: "grid" },
+]
+---
+
+<section class="section">
+    <ul class="features-table">
+        {features.map(feature => (
+            <li class="features-table__li">
+                <Icon class="features-table__li__icon" name={feature.icon} />
+                <h3 class="features-table__li__title">{feature.title}</h3>
+                <p class="features-table__li__description">{feature.description}</p>
+            </li>
+        ))}
+    </ul>
+</section>
+
+</section>
+
+<style>
+    .section {
+        padding: 24px;
+        width: min(1200px, 100%);
+		max-width: 1200px;	
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+        view-timeline-name: --reveal;
+        animation-name: show;
+        animation-fill-mode: both;
+        animation-timeline: --reveal;
+        animation-range: entry 15% cover 30%;
+    }
+    .features-table {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        border-top: 1px solid lightgray;
+        border-left: 1px solid lightgray;
+    }
+    .features-table::before {
+        content: "";
+        position: absolute;
+        top: -60px;
+        left: -1px;
+        width: 1px;
+        height: 60px;
+        background: lightgray;
+    }
+    .features-table::after {
+        content: "";
+        position: absolute;
+        bottom: -60px;
+        right: 0;
+        width: 1px;
+        height: 60px;
+        background: lightgray;
+    }
+    .features-table__li {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        border-bottom: 1px solid lightgray;
+        border-right: 1px solid lightgray;
+    }
+    .features-table__li__icon {
+        margin-bottom: 8px;
+        width: 24px;
+        height: 24px;
+    }
+    .features-table__li__description {
+        font-size: 14px;
+        color: grey;
+    }
+    @keyframes show {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>

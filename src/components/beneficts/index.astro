@@ -1,0 +1,62 @@
+---
+
+---
+
+<section class="section">
+    <div class="section__text">
+    <p class="section__text__p">
+        Sé lo complicado que puede ser organizar actividades. Entre inscripciones, grupos, asistencia, avisos de última hora y todo lo que surge en el día a día, al final terminas dedicando más tiempo a hojas de cálculo y a apagar fuegos que a lo que de verdad te apasiona: enseñar y crear comunidad.
+    </p>
+    <p class="section__text__p">
+        Por eso nació Vely: para quitarte de encima esas barreras y devolverte la energía en lo que realmente importa — ofrecer experiencias de calidad y estar más cerca de tus alumnos.    
+    </p>
+    <img class="section__text__img" src="/src/assets/signature.png" />
+    <p class="section__text__signature">Maria Moran; Funder & CEO</p>    
+</div>
+</section>
+
+<style>
+   .section {
+		padding: 24px;
+        width: min(1200px, 100%);
+		max-width: 1200px;	;	
+		display: flex;
+		flex-direction: column;
+        justify-content: center;
+        align-items: center;
+		gap: 12px;
+        view-timeline-name: --reveal;
+        animation-name: show;
+        animation-fill-mode: both;
+        animation-timeline: --reveal;
+        animation-range: entry 15% cover 30%;
+	}
+    .section__text {
+        max-width: 600px;
+        color: grey;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .section__text__p {
+        font-size: 1.5rem;
+        font-style: italic;
+    }
+    .section__text__img {
+        width: 100px;
+        overflow: hidden;
+    }
+    .section__text__signature {
+        font-style: italic;
+         font-size: 1.5rem;
+        font-family: "Caveat" !important;
+    }
+    @keyframes show {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>

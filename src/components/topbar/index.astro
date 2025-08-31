@@ -1,0 +1,62 @@
+---
+
+---
+
+<nav class="topbar">
+    <div class="topbar__section">
+        <a href="/" class="brand">Vely</a>
+    </div>
+    <div class="topbar__section">
+       
+    </div>
+    <div class="topbar__section">
+        <a class="cta-link" href="coming-soon">Me interesa</a>
+    </div>
+</nav>
+
+<style>
+    .topbar {
+        padding-right: 12px;
+        position: fixed;
+        top: 24px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        margin: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .topbar__section {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    .topbar__section:nth-child(1) {
+        padding: 12px 24px;
+    }
+    .topbar__section:nth-child(2) {
+        justify-content: center;
+        flex: 1;
+    }
+     .topbar__section:nth-child(3) {
+        justify-content: flex-end;
+    }
+    .brand {
+        font-weight: 700;
+        text-decoration: none;
+    }
+    .intralink {
+    text-decoration: none;
+    }
+    .cta-link {
+        padding: 12px 24px;
+        background: var(--black);
+        color: white;
+        border-radius: 25px;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+</style>

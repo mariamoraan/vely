@@ -1,11 +1,21 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/hero/index.astro';
+import Features from '../components/features/index.astro';
+import Beneficts from '../components/beneficts/index.astro';
+import FeaturesTable from '../components/features-table/index.astro';
+import Pricing from '../components/pricing/index.astro';
+import Footer from '../components/footer/index.astro';
+import { NewLeadForm } from '../components/new-lead-form/new-lead-form';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<Hero />
+	<Beneficts />
+	<Features />
+	<FeaturesTable />
+	<Pricing />
+	<NewLeadForm client:only />
+	<Footer />
 </Layout>

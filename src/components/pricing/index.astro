@@ -1,0 +1,186 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const pricing = [
+  {
+    title: "Basic",
+    description: "Ideal para profesores o monitores que empiezan con pocas actividades.",
+    price: 29,
+    included: [
+        "Crear actividades puntuales o recurrentes",
+        "Organizar grupos y horarios",
+        "Registrar asistencia de participantes",
+        "Enviar avisos y notificaciones simples"
+    ],
+    bestFor: "Ideal para pequeños grupos o clases con necesidades básicas de organización",
+    cta: "Empieza con Basic"
+  },
+  {
+    title: "Pro",
+    description: "Perfecto para quienes necesitan más control sobre su alumnado y asistencia.",
+    price: 59,
+    included: [
+        "Crear actividades puntuales o recurrentes",
+        "Organizar grupos y horarios",
+        "Registrar asistencia de participantes",
+        "Enviar avisos y notificaciones simples",
+        "Registrar si un participante ha pagado y enviar recordatorios de pago",
+        "Ver informes básicos de asistencia y pagos",
+        "Chat interno para comunicarse con los participantes de un grupo",
+        "Sincronización de actividades con calendario externo (Google, Outlook)"
+    ],
+    bestFor: "Para centros medianos que necesitan seguimiento de pagos y comunicación interna",
+    cta: "Elige Pro"
+  },
+  {
+    title: "Premium",
+    description: "La solución completa para academias y centros con múltiples actividades.",
+    price: 99,
+    included: [
+        "Crear actividades puntuales o recurrentes",
+        "Organizar grupos y horarios",
+        "Registrar asistencia de participantes",
+        "Enviar avisos y notificaciones simples",
+        "Registrar si un participante ha pagado y enviar recordatorios de pago",
+        "Ver informes básicos de asistencia y pagos",
+        "Chat interno para comunicarse con los participantes de un grupo",
+        "Sincronización de actividades con calendario externo (Google, Outlook)",
+        "Personalización de la apariencia de la plataforma para tu organización",
+        "Exportar datos de actividades, asistencia y pagos (CSV/PDF)",
+        "Soporte prioritario",
+        "Estadísticas avanzadas de participación y retención"
+    ],
+    bestFor: "Para grandes centros o escuelas que quieren análisis detallado y soporte premium",
+    cta: "Hazte Premium"
+  },
+]
+
+---
+
+<section id="pricing" class="section">
+    <h2 class="section__title">Planes claros, sin sorpresas</h2>
+    <p class="section__subtitle">Desde solo 29€/mes por organización. Sin contratos largos, sin letra pequeña. Empieza gratis y decide cuando quieras.</p>
+    <ul class="pricing">
+        {
+            pricing.map(plan => (
+                <li class="pricing__li">
+                    <h3 class="pricing__li__title">{plan.title}</h3>
+                    <p class="pricing__li__description">{plan.description}</p>
+                    <p class="pricing__li__price"><span class="pricing__li__price--bold">{plan.price}€</span>/mes</p>
+                    <p class="pricing__li__includes">Incluye:</p>
+                    <ul class="pricing__li__features">
+                        {plan.included.map(feature => (
+                            <li class="pricing__li__features__li"> <Icon class="features-table__li__icon" name="check-outlined" />{feature}</li>
+                        ))}
+                    </ul>
+                </li>
+            ))
+        }
+    </ul>
+</section>
+
+<style>
+    .section {
+		padding: 24px;
+        width: min(1200px, 100%);
+		max-width: 1200px;	;	
+		display: flex;
+		flex-direction: column;
+        justify-content: center;
+        align-items: center;
+		gap: 4px;
+        view-timeline-name: --reveal;
+        animation-name: show;
+        animation-fill-mode: both;
+        animation-timeline: --reveal;
+        animation-range: entry 15% cover 30%;
+	}
+    .section__title {
+        align-self: center;
+        font-size: 2rem;
+		font-weight: 500;
+		color: var(--color-primary);
+		margin-bottom: 8px;
+    }
+    .section__subtitle {
+        margin-bottom: 32px;
+        align-self: center;
+		font-weight: 400;
+		color: grey;
+        text-align: center;
+    }
+    .pricing {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+    }
+    .pricing__li {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        border: 1px solid lightgray;
+        border-radius: 24px;
+    }
+    .pricing__li__title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: var(--color-primary);
+    }
+    .pricing__li__description {
+        color: grey;
+    }
+    .pricing__li__price {
+        margin: 12px 0;
+        color: grey;
+    }
+    .pricing__li__price--bold {
+        font-size: 2rem;
+        color: var(--black);
+    }
+    .pricing__li__includes {
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+     .pricing__li__features {
+        margin-bottom: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex: 1;
+    }
+    .pricing__li__features__li {
+        margin-left: 12px;
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .features-table__li__icon {
+        margin-top: 3px;
+        min-height: 16px;
+        min-width: 16px;
+    }
+    .pricing__li__cta {
+        padding: 12px 24px;
+        margin-top: 12px;
+        background: #F7F7F7;
+        border: 1px solid lightgray;
+        border-radius: 24px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    @keyframes show {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .pricing {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+</style>

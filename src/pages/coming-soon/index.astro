@@ -1,0 +1,42 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { NewLeadForm } from '../../components/new-lead-form/new-lead-form';
+---
+
+<Layout>
+    <div class="coming-soon">
+        <div class="coming-soon__content">
+            <h1 class="coming-soon__title">Coming Soon</h1>
+            <p class="coming-soon__description">Estamos trabajando duro para lanzar Vely. ¡Mantente atento!</p>
+            <NewLeadForm client:only />
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .coming-soon {
+        width: 100%;
+        height: calc(100dvh - 56px - 60px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .coming-soon__content {
+        width: min(1200px, 100%);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .coming-soon__title {
+        font-size: 2.5rem;
+        align-items: center;
+        text-align: center;
+    }
+    .coming-soon__description {
+        margin-bottom: 24px;
+        font-size: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+</style>

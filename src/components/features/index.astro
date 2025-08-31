@@ -1,0 +1,95 @@
+---
+
+---
+
+<section id="features" class="section">
+    <h2 class="section__title">En solo 3 pasos, todo bajo control</h2>
+    <p class="section__subtitle">Para que tu solo te enfoques en lo que de verdad importa</p>
+    <ul class="features">
+        <li class="features__li">
+            <p class="features__li__text">Regístrate y crea tu primera actividad.</p>  
+            <img src="https://framerusercontent.com/images/HbZbfS0MoFnsAVe4zd9uWn7w.svg" alt="Imagen 1" />
+        </li>
+        <li class="features__li">
+            <p class="features__li__text">Comparte el enlace con tus alumnos.</p>
+            <img src="https://framerusercontent.com/images/HbZbfS0MoFnsAVe4zd9uWn7w.svg" alt="Imagen 2" />
+        </li>
+        <li class="features__li">
+            <p class="features__li__text">Comienza a disfrutar de una gestión sin estrés.</p>
+            <img src="https://framerusercontent.com/images/HbZbfS0MoFnsAVe4zd9uWn7w.svg" alt="Imagen 3" />
+        </li>
+    </ul>
+</section>
+
+<style>
+    .section {
+        padding: 24px;
+        width: min(1200px, 100%);
+		max-width: 1200px;	
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+        view-timeline-name: --reveal;
+        animation-name: show;
+        animation-fill-mode: both;
+        animation-timeline: --reveal;
+        animation-range: entry 15% cover 30%;
+        
+    }
+    .section__title {
+        align-self: center;
+        font-size: 2rem;
+		font-weight: 500;
+		color: var(--color-primary);
+		margin-bottom: 8px;
+    }
+    .section__subtitle {
+        margin-bottom: 32px;
+        align-self: center;
+        font-size: 1.5rem;
+		font-weight: 400;
+		color: grey;
+    }
+    .features {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 24px;
+    }
+    .features__li {
+        padding: 48px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        background: #F7F7F7;
+        border-radius: 24px;
+    }
+
+    .features__li__text  {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+   @keyframes show {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .features__li__text  {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .features {
+                display: flex;
+                flex-direction: column;
+        }
+    }
+
+</style>

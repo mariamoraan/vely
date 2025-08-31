@@ -1,0 +1,90 @@
+---
+
+---
+
+<footer id="contact" class="footer">
+    <div class="footer_cta">
+        <p class="footer__text">Organiza tus clases de forma rápida, clara y confiable. Vely hace que todo sea simple para ti y tus alumnos.</p>
+        <a class="footer__link" href="coming-soon">Avísame cuando salga</a>
+    </div>
+    <ul class="footer__links">
+            <li class="footer__links__li"><a href="#home" class="footer__links__li__a">Home</a></li>
+            <li class="footer__links__li"><a href="#features" class="footer__links__li__a">Features</a></li>
+            <li class="footer__links__li"><a href="#pricing" class="footer__links__li__a">Pricing</a></li>
+            <li class="footer__links__li"><a href="#contact" class="footer__links__li__a">Contact</a></li>
+    </ul>
+    <div class="footer__conditions">
+        <p>&copy;{new Date().getFullYear()} Todos los derechos reservados.</p>
+        <a>Terms & Privacy</a>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        padding: 24px;
+        width: min(1200px, 100%);
+		max-width: 1200px;	
+		display: flex;
+        flex-direction: column;
+        gap: 24px;
+        view-timeline-name: --reveal;
+        animation-name: show;
+        animation-fill-mode: both;
+        animation-timeline: --reveal;
+        animation-range: entry 15% cover 30%;
+    }
+    .footer_cta {
+        margin-bottom: 56px;
+        display: flex;
+		flex-direction: column;
+        justify-content: center;
+        align-items: center;
+		gap: 24px;
+        text-align: center;
+    }
+    .footer__text {
+        font-size: 2rem;
+		font-weight: 500;
+		color: var(--color-primary);
+		margin-bottom: 8px;
+    }
+    .footer__link {
+        padding: 12px 24px;
+        max-width: max-content;
+        background: var(--black);
+        color: white;
+        border-radius: 16px;
+        text-decoration: none;
+    }
+    .footer__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+    .footer__links__li__a {
+        color: grey;
+        text-decoration: none;
+    }
+    .footer__conditions {
+        padding-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid rgb(195, 195, 195);
+    }
+     @keyframes show {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .footer__conditions {
+            flex-direction: column;
+        }
+    }
+</style>
